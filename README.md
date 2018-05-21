@@ -11,3 +11,4 @@ To use:
 5. Type 'python neural_style_transfer.py'
 6. That's it! Training could take several hours. Intermediate images will be generated at regular intervals.
 7. Check the 'output' folder for results.
+

@@ -1,5 +1,3 @@
-### Import needed libraries
-
 import os
 import sys
 import numpy as np
@@ -10,26 +8,18 @@ from PIL import Image
 from load_vgg import LoadVGG
 from loss import Loss
 
-### Constants for image input and output
-
 STYLE_IMAGE = 'images/style.jpg'
 CONTENT_IMAGE = 'images/content.jpg'
 IMAGE_WIDTH = 600
 IMAGE_HEIGHT = 600
 COLOR_CHANNELS = 3
-
 OUTPUT_DIR = 'output/'
 
 ### Algorithm constants
 
-# Amount of noise to mix into the content image
-NOISE_RATIO = 0.6
-
-# Number of training iterations
-ITERATIONS = 1000
-
-# Pre-trained CNN model
-VGG_MODEL = 'imagenet-vgg-verydeep-19.mat'
+NOISE_RATIO = 0.6 # Amount of noise to mix into the content image
+ITERATIONS = 5000 # Number of training iterations
+VGG_MODEL = 'imagenet-vgg-verydeep-19.mat' # Pre-trained CNN model
 
 # Initialize helper classes
 model_loader = LoadVGG()
@@ -97,17 +87,29 @@ total_loss = loss_calculator.total_loss(sess, model, content_image, style_image)
 optimizer = tf.train.AdamOptimizer(2.0)
 train_step = optimizer.minimize(total_loss)
 
+# monitor
+summary_op = tf.summary.scalar('loss', total_loss)
+writer = tf.summary.FileWriter('summaries', graph=tf.get_default_graph())
+#step_var = tf.train.create_global_step()
 
 ### Run
 
 sess.run(tf.global_variables_initializer())
 loss_calculator.assign_to_input(sess, model, input_image)
 
+
 for itr in range(ITERATIONS):
     sess.run(train_step)
 
-    # log every 10 iterations
-    if itr % 10 == 0:
+    # update summary every 5 iterations
+    if itr % 5 == 0:
+        print("writing summary!")
+        summary = sess.run(summary_op)
+        writer.add_summary(summary, global_step=itr)
+        writer.flush()
+
+    # save image every 50 iterations
+    if itr % 50 == 0:
         save_current_generated_image(sess, model)
         print("Iteration %d" % (itr))
         print("Cost: ", sess.run(total_loss))
