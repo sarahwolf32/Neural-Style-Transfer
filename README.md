@@ -14,11 +14,18 @@ To use:
 
 Below is a piece of art I created with this code. Full disclosure: some of the results I did not post were quite terrible looking, so do not be discouraged if your first few attempts do not come out as you had hoped. I recommend experimenting a bit to get a feel for what works well and what doesn't. The same style image can have a very different effect on different content images, or with different hyperparameters.
 
-Style Image:
-![Style Image](images/style.jpg)
+<p align='center'>
+    Style Image:
+    <p align='center'><img src="images/style.jpg" alt="Style Image" height="350" width="350"/></p>
+</p>
 
-Content Image:
-![Content Image](images/content.jpg)
+<p align='center'>
+    Content Image:
+    <p align='center'><img src="images/content.jpg" alt="Content Image" height="350" width="350"/></p>
+</p>
 
-Resulting Generated Image:
-![Generated Image](finished/tree_990.png)
+<p align='center'>
+    Resulting Generated Image:
+    <p align='center'><img src="finished/tree_990.png" alt="Generated Image" height="350" width="350"/></p>
+</p>
+
