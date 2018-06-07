@@ -18,7 +18,7 @@ OUTPUT_DIR = 'output/'
 ### Algorithm constants
 
 NOISE_RATIO = 0.6 # Amount of noise to mix into the content image
-ITERATIONS = 5000 # Number of training iterations
+ITERATIONS = 1000 # Number of training iterations
 VGG_MODEL = 'imagenet-vgg-verydeep-19.mat' # Pre-trained CNN model
 
 # Initialize helper classes
@@ -90,7 +90,6 @@ train_step = optimizer.minimize(total_loss)
 # monitor
 summary_op = tf.summary.scalar('loss', total_loss)
 writer = tf.summary.FileWriter('summaries', graph=tf.get_default_graph())
-#step_var = tf.train.create_global_step()
 
 ### Run
 
@@ -110,6 +109,8 @@ for itr in range(ITERATIONS):
 
     # save image every 50 iterations
     if itr % 50 == 0:
+
+        # save to file
         save_current_generated_image(sess, model)
         print("Iteration %d" % (itr))
         print("Cost: ", sess.run(total_loss))

@@ -12,3 +12,13 @@ To use:
 6. That's it! Training could take several hours. Intermediate images will be generated at regular intervals.
 7. Check the 'output' folder for results.
 
+Below is a piece of art I created with this code. Full disclosure: some of the results I did not post were quite terrible looking, so do not be discouraged if your first few attempts do not come out as you had hoped. I recommend experimenting a bit to get a feel for what works well and what doesn't. The same style image can have a very different effect on different content images, or with different hyperparameters.
+
+Style Image:
+![Style Image](images/style.jpg)
+
+Content Image:
+![Content Image](images/content.jpg)
+
+Resulting Generated Image:
+![Generated Image](finished/tree_990.png)

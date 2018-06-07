@@ -39,6 +39,9 @@ class Loss():
     def assign_to_input(self, sess, model, image):
         sess.run(model[self.INPUT_LAYER].assign(image))
 
+    def input(self, model):
+        return model[self.INPUT_LAYER]
+
     def current_input(self, sess, model):
         return sess.run(model[self.INPUT_LAYER])
 
