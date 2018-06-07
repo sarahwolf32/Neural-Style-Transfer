@@ -14,18 +14,18 @@ To use:
 
 Below is a piece of art I created with this code. Full disclosure: some of the results I did not post were quite terrible looking, so do not be discouraged if your first few attempts do not come out as you had hoped. I recommend experimenting a bit to get a feel for what works well and what doesn't. The same style image can have a very different effect on different content images, or with different hyperparameters.
 
-<div style='float:left;margin-right:10px;width:32%'>
+<div style='float:left;margin-right:10px;width:280px%'>
     <p align='center'>Style Image:</p>
-    <p align='center'><img src="images/style.jpg" alt="Style Image" height="300" width="300"/></p>
+    <p align='center'><img src="images/style.jpg" alt="Style Image" height="280" width="280"/></p>
 </div>
 
-<div style='float:left;margin-right:10px;width:32%'>
+<div style='float:left;margin-right:10px;width:280px'>
     <p align='center'>Content Image:</p>
-    <p align='center'><img src="images/content.jpg" alt="Content Image" height="300" width="300"/></p>
+    <p align='center'><img src="images/content.jpg" alt="Content Image" height="280" width="280"/></p>
 </div>
 
-<div style='float:left;margin-right:10px;width:32%'>
+<div style='float:left;margin-right:10px;width:280px'>
     <p align='center'>Resulting Generated Image:</p>
-    <p align='center'><img src="finished/tree_990.png" alt="Generated Image" height="300" width="300"/></p>
+    <p align='center'><img src="finished/tree_990.png" alt="Generated Image" height="280" width="280"/></p>
 </div>
 
