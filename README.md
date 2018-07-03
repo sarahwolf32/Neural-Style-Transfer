@@ -24,5 +24,5 @@ To use:
 ## Acknowledgements
 
 In developing this code I drew on the following implementations:
-* [Tensorflow Implementation of A Neural Algorithm of Artistic Style](http://www.chioka.in/tensorflow-implementation-neural-algorithm-of-artistic-style)
-* [Painting like Van Gogh with Convolutional Neural Networks](http://www.subsubroutine.com/sub-subroutine/2016/11/12/painting-like-van-gogh-with-convolutional-neural-networks)
+* [Tensorflow Implementation of A Neural Algorithm of Artistic Style](https://github.com/log0/neural-style-painting)
+* [Painting like Van Gogh with Convolutional Neural Networks](https://gist.github.com/standarderror/855adcadce2e627a7b9a25d6261e03a6#file-20161112_neural_style_tensorflow-py)
